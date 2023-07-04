@@ -1,4 +1,4 @@
-// This script batch mints Uhanmi ERC721A tokens.
+// This script batch mints Indian_ETH ERC721A tokens.
 
 // Import required libraries
 const { ethers } = require("hardhat");
