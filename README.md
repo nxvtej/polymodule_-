@@ -22,14 +22,16 @@ npx hardhat test
 
 ### Deploying the ERC721 Contract
 
-Before deploying, make sure to rename ".env.example" to ".env" and provide your wallet private key where required i.e. "PRIVATE_KEY= 'your wallet private key'". Run the following command to deploy the ERC721A contract to the Goerli Ethereum Testnet:
+Before deploying, make sure to rename ".env.example" to ".env" and provide your wallet private key where required i.e. "PRIVATE_KEY= 'your wallet private key'". Run the following command to deploy the ERC721 contract to the Goerli Ethereum Testnet:
 
 ``` shell
 npx hardhat run scripts/deploy.js --network goerli 
 ```
+## NOTE:
+After deploying the address will generate. So, copy that address into `contarctAddress.js`(stored in metadata folder) and also in `batchMint.js`(stored in scripts folder)
 
-The script will deploy the contract and provide the address of the contract in the console and also in the "contractAddress.js" file in the metadata folder.
-
+ 
+The script will deploy the contract 
 ### Batch Mint NFTs
 
 Run the following command to batch-mint NFTs using the deployed ERC721 contract:
