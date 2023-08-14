@@ -1,7 +1,7 @@
 // Import necessary packages and contracts
 const { ethers } = require("hardhat");
 const { FXRootContractAbi } = require('../artifacts/FXRootContractAbi.js');
-const ABI = require('../artifacts/contracts/Indian_ETH.sol/Indian_ETH.json');
+const ABI = require('../artifacts/contracts/CU_ETH.sol/CU_ETH.json');
 require('dotenv').config();
 
 //Transfer ERC721A tokens to the Ethereum FxChain network
@@ -19,8 +19,8 @@ async function main() {
   const [signer] = await ethers.getSigners();
 
   // Get ERC721A contract instance
-  const NFT = await ethers.getContractFactory("Indian_ETH");
-  const nft = await NFT.attach('0x5C466002629655EE6e62e91a37722D17d97067E7');
+  const NFT = await ethers.getContractFactory("CU_ETH");
+  const nft = await NFT.attach('0x848e6325De4886c61bF815123a44bA0d4796f9FD');
 
   // Get FXRoot contract instance
   const fxRootAddress = '0xF9bc4a80464E48369303196645e876c8C7D972de';
@@ -54,7 +54,7 @@ async function main() {
   const balance = await nft.balanceOf(wallet.address);
 
   // Print the balance of the wallet
-  console.log("IndianNFT wallet balance", wallet.address, "is: ", balance.toString());
+  console.log("CU wallet balance", wallet.address, "is: ", balance.toString());
 }
 
 

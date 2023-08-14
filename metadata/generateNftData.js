@@ -5,16 +5,15 @@ console.log(__dirname);
 // Imports the nfts array from a separate file
 const nfts = require('./nfts');
 
-for (let i = 0; i < nfts.length; i++) {
+for (let k = 0; k < nfts.length; k++) {
 
   // Creates a JSON object for each NFT
   const json = {
-    name: nfts[i].name,
-    description: nfts[i].description,
-    image: `https://gateway.pinata.cloud/ipfs/${nfts[i].image}`,
+    name: nfts[k].name,
+    description: nfts[k].description,
+    image: `https://gateway.pinata.cloud/ipfs/${nfts[k].image}`,
   };
-
-  const name = nfts[i].name;
+  const name = nfts[k].name;
 
   // Replaces any non-alphanumeric characters in the name with an empty string for the filename
   const fileName = `${name.replace(/[^a-zA-Z0-9]/g, '')}`;
