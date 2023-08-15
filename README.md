@@ -54,6 +54,4 @@ This project, Polygon Advanced Module 1, focuses on deploying an NFT collection 
 
 This project is licensed under the [MIT License](LICENSE). Feel free to use it for your own purposes.
 
----
 
-Please ensure that the structure and formatting align with your project's specifics. If you have any additional information to add or specific formatting preferences, please let me know!
